@@ -357,7 +357,7 @@ const Footer = () => (
         
         <div>
           <h4 className="font-bold text-sm uppercase tracking-[0.2em] mb-8 text-[#d4af37]">Newsletter</h4>
-          <p className="text-gray-500 text-xs mb-6">Receba insights sobre o mercado digital.</p>
+          <p className="text-gray-300 text-sm mb-6 font-medium">Receba insights sobre o mercado digital.</p>
           <div className="relative">
             <input type="email" placeholder="Seu e-mail" className="w-full bg-white/5 border border-white/10 rounded-full py-3 px-5 text-sm focus:outline-none focus:border-[#d4af37] transition-all" />
             <button className="absolute right-2 top-2 bg-gold-gradient text-black p-1.5 rounded-full"><ArrowRight size={16} /></button>
