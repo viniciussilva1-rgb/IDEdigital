@@ -223,9 +223,11 @@ const MidCTA = () => (
         “Chegou a hora da sua marca aparecer.”
       </h2>
       <div className="flex justify-center">
-        <GoldButton variant="cta" className="group text-lg px-12 py-5 border-3">
-          FALE COM A IDE DIGITAL AGORA <ArrowRight className="group-hover:translate-x-2 transition-transform" />
-        </GoldButton>
+        <a href="https://wa.me/351936758693?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20a%20IDE%20Digital." target="_blank" rel="noopener noreferrer">
+          <GoldButton variant="cta" className="group text-lg px-12 py-5 border-3">
+            FALE COM A IDE DIGITAL AGORA <ArrowRight className="group-hover:translate-x-2 transition-transform" />
+          </GoldButton>
+        </a>
       </div>
     </div>
   </section>
