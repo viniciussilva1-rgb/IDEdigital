@@ -49,7 +49,7 @@ const Logo = () => {
     <div className="flex items-center group cursor-pointer">
       {!imgError ? (
         <img 
-          src="Logo IDEDigital.png" 
+          src="logo ide png.png" 
           alt="IDE Digital" 
           className="h-12 md:h-16 w-auto object-contain transition-all duration-500 group-hover:scale-105 group-hover:drop-shadow-[0_0_15px_rgba(212,175,55,0.4)]"
           onError={() => setImgError(true)}
