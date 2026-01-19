@@ -46,9 +46,9 @@ const Logo = ({ size = 'default' }: { size?: 'small' | 'default' | 'large' }) =>
   const [imgError, setImgError] = useState(false);
   
   const sizeClasses = {
-    small: 'h-10 md:h-12',
-    default: 'h-14 md:h-20',
-    large: 'h-20 md:h-24'
+    small: 'h-16 md:h-20',
+    default: 'h-20 md:h-28',
+    large: 'h-28 md:h-36'
   };
 
   return (
