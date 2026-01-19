@@ -328,7 +328,7 @@ const Footer = () => (
       <div className="grid md:grid-cols-4 gap-16 mb-20">
         <div className="col-span-1 md:col-span-1">
           <Logo />
-          <p className="text-gray-500 mt-8 leading-relaxed text-sm">
+          <p className="text-gray-300 mt-8 leading-relaxed text-sm font-medium">
             Especialistas em transformar ideias em presenças digitais luxuosas e lucrativas.
           </p>
           <div className="flex gap-4 mt-8">
@@ -365,7 +365,7 @@ const Footer = () => (
         </div>
       </div>
       
-      <div className="pt-12 border-t border-white/5 text-center text-[10px] text-gray-600 uppercase tracking-widest">
+      <div className="pt-12 border-t border-white/5 text-center text-xs text-gray-400 uppercase tracking-widest">
         <p>&copy; {new Date().getFullYear()} IDE Digital. Transformando o futuro hoje.</p>
       </div>
     </div>
