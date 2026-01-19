@@ -106,7 +106,9 @@ const Navbar = () => {
           {navLinks.map(link => (
             <a key={link.name} href={link.href} className="text-xs font-semibold uppercase tracking-widest hover:text-[#d4af37] transition-colors">{link.name}</a>
           ))}
-          <GoldButton variant="outline" className="px-6 py-2.5 text-[10px]">Falar com Especialista</GoldButton>
+          <a href="https://wa.me/351936758693?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20um%20especialista%20da%20IDE%20Digital." target="_blank" rel="noopener noreferrer">
+            <GoldButton variant="outline" className="px-6 py-2.5 text-[10px]">Falar com Especialista</GoldButton>
+          </a>
         </div>
 
         {/* Mobile Toggle */}
@@ -121,7 +123,9 @@ const Navbar = () => {
           {navLinks.map(link => (
             <a key={link.name} href={link.href} onClick={() => setIsOpen(false)} className="text-lg font-medium border-b border-white/10 pb-2">{link.name}</a>
           ))}
-          <GoldButton className="w-full">WhatsApp</GoldButton>
+          <a href="https://wa.me/351936758693?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20um%20especialista%20da%20IDE%20Digital." target="_blank" rel="noopener noreferrer" className="w-full">
+            <GoldButton className="w-full">Falar com Especialista</GoldButton>
+          </a>
         </div>
       )}
     </nav>
@@ -355,13 +359,43 @@ const Footer = () => (
           </ul>
         </div>
         
-        <div>
-          <h4 className="font-bold text-sm uppercase tracking-[0.2em] mb-8 text-[#d4af37]">Newsletter</h4>
-          <p className="text-gray-300 text-sm mb-6 font-medium">Receba insights sobre o mercado digital.</p>
-          <div className="relative">
-            <input type="email" placeholder="Seu e-mail" className="w-full bg-white/5 border border-white/10 rounded-full py-3 px-5 text-sm focus:outline-none focus:border-[#d4af37] transition-all" />
-            <button className="absolute right-2 top-2 bg-gold-gradient text-black p-1.5 rounded-full"><ArrowRight size={16} /></button>
-          </div>
+        <div className="col-span-1 md:col-span-1">
+          <h4 className="font-bold text-sm uppercase tracking-[0.2em] mb-8 text-[#d4af37]">Solicitar Contato</h4>
+          <p className="text-gray-300 text-sm mb-6 font-medium">Preencha e entraremos em contato consigo.</p>
+          <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); const form = e.target as HTMLFormElement; const email = (form.elements.namedItem('email') as HTMLInputElement).value; const phone = (form.elements.namedItem('phone') as HTMLInputElement).value; const service = (form.elements.namedItem('service') as HTMLSelectElement).value; window.open(`https://wa.me/351936758693?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20contato.%0A%0AEmail:%20${encodeURIComponent(email)}%0ATelemovel:%20${encodeURIComponent(phone)}%0AServi%C3%A7o:%20${encodeURIComponent(service)}`, '_blank'); }}>
+            <input 
+              type="email" 
+              name="email"
+              placeholder="Seu e-mail" 
+              required
+              className="w-full bg-white/5 border border-white/10 rounded-lg py-3 px-4 text-sm focus:outline-none focus:border-[#d4af37] transition-all" 
+            />
+            <input 
+              type="tel" 
+              name="phone"
+              placeholder="Seu telemóvel" 
+              required
+              className="w-full bg-white/5 border border-white/10 rounded-lg py-3 px-4 text-sm focus:outline-none focus:border-[#d4af37] transition-all" 
+            />
+            <select 
+              name="service"
+              required
+              className="w-full bg-white/5 border border-white/10 rounded-lg py-3 px-4 text-sm focus:outline-none focus:border-[#d4af37] transition-all text-gray-400 appearance-none cursor-pointer"
+            >
+              <option value="" disabled selected>Selecione o serviço</option>
+              <option value="Criação de Site">Criação de Site</option>
+              <option value="SEO e Otimização">SEO e Otimização</option>
+              <option value="Gestão de Redes Sociais">Gestão de Redes Sociais</option>
+              <option value="Marketing Digital">Marketing Digital</option>
+              <option value="Outro">Outro</option>
+            </select>
+            <button 
+              type="submit"
+              className="w-full bg-gold-gradient text-black py-3 px-4 rounded-lg font-bold text-sm uppercase tracking-wider hover:brightness-110 transition-all flex items-center justify-center gap-2"
+            >
+              Enviar <ArrowRight size={16} />
+            </button>
+          </form>
         </div>
       </div>
       
