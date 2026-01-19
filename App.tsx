@@ -42,8 +42,14 @@ const GoldButton = ({ children, onClick, variant = 'primary', className = '' }: 
 };
 
 // Componente de Logo Atualizado com a nova imagem enviada
-const Logo = () => {
+const Logo = ({ size = 'default' }: { size?: 'small' | 'default' | 'large' }) => {
   const [imgError, setImgError] = useState(false);
+  
+  const sizeClasses = {
+    small: 'h-10 md:h-12',
+    default: 'h-14 md:h-20',
+    large: 'h-20 md:h-24'
+  };
 
   return (
     <div className="flex items-center group cursor-pointer">
@@ -51,7 +57,7 @@ const Logo = () => {
         <img 
           src="/logo.png" 
           alt="IDE Digital" 
-          className="h-12 md:h-16 w-auto object-contain transition-all duration-500 group-hover:scale-105 group-hover:drop-shadow-[0_0_15px_rgba(212,175,55,0.4)]"
+          className={`${sizeClasses[size]} w-auto object-contain transition-all duration-500 group-hover:scale-105 group-hover:drop-shadow-[0_0_15px_rgba(212,175,55,0.4)]`}
           onError={() => setImgError(true)}
         />
       ) : (
