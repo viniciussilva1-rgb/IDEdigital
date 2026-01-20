@@ -356,7 +356,7 @@ const Footer = () => (
           <h4 className="font-bold text-sm uppercase tracking-[0.2em] mb-8 text-[#d4af37]">Contato</h4>
           <ul className="space-y-4 text-gray-400 text-sm">
             <li>Lourinhã, Portugal</li>
-            <li>info@idedigital.pt</li>
+            <li>idedigital.pt@gmail.com</li>
             <li>+351 936 758 693</li>
           </ul>
         </div>
@@ -364,7 +364,15 @@ const Footer = () => (
         <div className="col-span-1 md:col-span-1">
           <h4 className="font-bold text-sm uppercase tracking-[0.2em] mb-8 text-[#d4af37]">Solicitar Contato</h4>
           <p className="text-gray-300 text-sm mb-6 font-medium">Preencha e entraremos em contato consigo.</p>
-          <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); const form = e.target as HTMLFormElement; const email = (form.elements.namedItem('email') as HTMLInputElement).value; const phone = (form.elements.namedItem('phone') as HTMLInputElement).value; const service = (form.elements.namedItem('service') as HTMLSelectElement).value; window.open(`https://wa.me/351936758693?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20contato.%0A%0AEmail:%20${encodeURIComponent(email)}%0ATelemovel:%20${encodeURIComponent(phone)}%0AServi%C3%A7o:%20${encodeURIComponent(service)}`, '_blank'); }}>
+          <form 
+            className="space-y-4" 
+            action="https://formsubmit.co/idedigital.pt@gmail.com" 
+            method="POST"
+          >
+            <input type="hidden" name="_subject" value="Novo contacto do site IDE Digital" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_next" value="https://idedigital.pt/obrigado" />
             <input 
               type="email" 
               name="email"
