@@ -366,13 +366,43 @@ const Footer = () => (
           <p className="text-gray-300 text-sm mb-6 font-medium">Preencha e entraremos em contato consigo.</p>
           <form 
             className="space-y-4" 
-            action="https://formsubmit.co/idedigital.pt@gmail.com" 
+            action="https://formsubmit.co/ajax/idedigital.pt@gmail.com" 
             method="POST"
+            onSubmit={async (e) => {
+              e.preventDefault();
+              const form = e.target as HTMLFormElement;
+              const formData = new FormData(form);
+              const submitBtn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+              const originalText = submitBtn.innerHTML;
+              submitBtn.innerHTML = 'A enviar...';
+              submitBtn.disabled = true;
+              
+              try {
+                const response = await fetch('https://formsubmit.co/ajax/idedigital.pt@gmail.com', {
+                  method: 'POST',
+                  body: formData,
+                  headers: {
+                    'Accept': 'application/json'
+                  }
+                });
+                
+                if (response.ok) {
+                  alert('Mensagem enviada com sucesso! Entraremos em contacto em breve.');
+                  form.reset();
+                } else {
+                  alert('Erro ao enviar. Por favor tente novamente.');
+                }
+              } catch (error) {
+                alert('Erro ao enviar. Por favor tente novamente.');
+              }
+              
+              submitBtn.innerHTML = originalText;
+              submitBtn.disabled = false;
+            }}
           >
             <input type="hidden" name="_subject" value="Novo contacto do site IDE Digital" />
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_template" value="table" />
-            <input type="hidden" name="_next" value="https://idedigital.pt/obrigado" />
             <input 
               type="email" 
               name="email"
@@ -399,6 +429,12 @@ const Footer = () => (
               <option value="Marketing Digital">Marketing Digital</option>
               <option value="Outro">Outro</option>
             </select>
+            <textarea 
+              name="message"
+              placeholder="Descreva o que pretende (opcional)"
+              rows={3}
+              className="w-full bg-white/5 border border-white/10 rounded-lg py-3 px-4 text-sm focus:outline-none focus:border-[#d4af37] transition-all resize-none"
+            ></textarea>
             <button 
               type="submit"
               className="w-full bg-gold-gradient text-black py-3 px-4 rounded-lg font-bold text-sm uppercase tracking-wider hover:brightness-110 transition-all flex items-center justify-center gap-2"
