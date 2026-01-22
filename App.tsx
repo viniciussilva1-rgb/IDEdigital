@@ -87,6 +87,7 @@ const Navbar = () => {
     { name: 'Sobre', href: '#about' },
     { name: 'Serviços', href: '#services' },
     { name: 'Portfólio', href: '#portfolio' },
+    { name: 'Preços', href: '#pricing' },
     { name: 'FAQ', href: '#faq' },
   ];
 
@@ -396,6 +397,207 @@ const App: React.FC = () => {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section id="pricing" className="py-24 bg-black">
+        <div className="container mx-auto px-6">
+          <SectionTitle subtitle="Tabela de Preços" title="Serviços Individuais e Pacotes" />
+          
+          {/* 💻 Criação de Sites */}
+          <div className="mb-20">
+            <h3 className="text-3xl font-bold mb-8 flex items-center gap-3"><span className="text-2xl">💻</span> Criação de Sites</h3>
+            <div className="bg-[#0a0a0a] border border-white/5 rounded-2xl overflow-x-auto">
+              <table className="w-full text-left">
+                <thead>
+                  <tr className="border-b border-white/5 bg-[#0f0f0f]">
+                    <th className="p-6 font-bold text-[#d4af37] uppercase tracking-widest">Serviço</th>
+                    <th className="p-6 font-bold text-[#d4af37] uppercase tracking-widest">Preço Estimado</th>
+                    <th className="p-6 font-bold text-[#d4af37] uppercase tracking-widest">Observação</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-white/5 hover:bg-[#0f0f0f] transition-colors">
+                    <td className="p-6">Site institucional simples (5 páginas)</td>
+                    <td className="p-6 font-bold">350 € – 800 €</td>
+                    <td className="p-6 text-gray-400">Valor médio de mercado</td>
+                  </tr>
+                  <tr className="border-b border-white/5 hover:bg-[#0f0f0f] transition-colors">
+                    <td className="p-6">Site profissional completo</td>
+                    <td className="p-6 font-bold">800 € – 2 500 €</td>
+                    <td className="p-6 text-gray-400">Dependendo de funcionalidades e design</td>
+                  </tr>
+                  <tr className="border-b border-white/5 hover:bg-[#0f0f0f] transition-colors">
+                    <td className="p-6">Loja online básica</td>
+                    <td className="p-6 font-bold">1 200 € – 3 500 €</td>
+                    <td className="p-6 text-gray-400">E-commerce simples</td>
+                  </tr>
+                  <tr className="hover:bg-[#0f0f0f] transition-colors">
+                    <td className="p-6">Website personalizado avançado</td>
+                    <td className="p-6 font-bold">2 500 € – 10 000 €+</td>
+                    <td className="p-6 text-gray-400">Com base de dados ou funcionalidades específicas</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          {/* 📱 Gestão de Redes Sociais */}
+          <div className="mb-20">
+            <h3 className="text-3xl font-bold mb-8 flex items-center gap-3"><span className="text-2xl">📱</span> Gestão de Redes Sociais</h3>
+            <div className="bg-[#0a0a0a] border border-white/5 rounded-2xl overflow-x-auto">
+              <table className="w-full text-left">
+                <thead>
+                  <tr className="border-b border-white/5 bg-[#0f0f0f]">
+                    <th className="p-6 font-bold text-[#d4af37] uppercase tracking-widest">Serviço</th>
+                    <th className="p-6 font-bold text-[#d4af37] uppercase tracking-widest">Preço Estimado</th>
+                    <th className="p-6 font-bold text-[#d4af37] uppercase tracking-widest">O que pode incluir</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-white/5 hover:bg-[#0f0f0f] transition-colors">
+                    <td className="p-6">Básico (2-3 posts/mês)</td>
+                    <td className="p-6 font-bold">100 € – 250 €/mês</td>
+                    <td className="p-6 text-gray-400">Criação de posts e gestão simples</td>
+                  </tr>
+                  <tr className="border-b border-white/5 hover:bg-[#0f0f0f] transition-colors">
+                    <td className="p-6">Médio (conteúdo + estratégia)</td>
+                    <td className="p-6 font-bold">245 € – 350 €/mês</td>
+                    <td className="p-6 text-gray-400">Posts + relatórios + criação gráfica</td>
+                  </tr>
+                  <tr className="hover:bg-[#0f0f0f] transition-colors">
+                    <td className="p-6">Completo (posts frequentes + vídeos)</td>
+                    <td className="p-6 font-bold">350 € – 500 €+/mês</td>
+                    <td className="p-6 text-gray-400">Conteúdo avançado e interação</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          {/* 🔍 SEO */}
+          <div className="mb-20">
+            <h3 className="text-3xl font-bold mb-8 flex items-center gap-3"><span className="text-2xl">🔍</span> SEO (Otimização para Motores de Busca)</h3>
+            <div className="bg-[#0a0a0a] border border-white/5 rounded-2xl overflow-x-auto">
+              <table className="w-full text-left">
+                <thead>
+                  <tr className="border-b border-white/5 bg-[#0f0f0f]">
+                    <th className="p-6 font-bold text-[#d4af37] uppercase tracking-widest">Serviço</th>
+                    <th className="p-6 font-bold text-[#d4af37] uppercase tracking-widest">Preço Estimado</th>
+                    <th className="p-6 font-bold text-[#d4af37] uppercase tracking-widest">Detalhes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-white/5 hover:bg-[#0f0f0f] transition-colors">
+                    <td className="p-6">Auditoria SEO (única)</td>
+                    <td className="p-6 font-bold">240 € – 1 050 €</td>
+                    <td className="p-6 text-gray-400">Análise técnica e recomendações</td>
+                  </tr>
+                  <tr className="border-b border-white/5 hover:bg-[#0f0f0f] transition-colors">
+                    <td className="p-6">SEO local / mensal</td>
+                    <td className="p-6 font-bold">500 € – 1 500 €/mês</td>
+                    <td className="p-6 text-gray-400">Serviços contínuos para negócios locais</td>
+                  </tr>
+                  <tr className="hover:bg-[#0f0f0f] transition-colors">
+                    <td className="p-6">Conteúdo SEO por artigo</td>
+                    <td className="p-6 font-bold">130 € – 330 €/artigo</td>
+                    <td className="p-6 text-gray-400">Artigos otimizados para SEO</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          {/* 📦 Pacotes Estratégicos */}
+          <div>
+            <h3 className="text-3xl font-bold mb-12 text-center">📦 Exemplos de Pacotes Estratégicos</h3>
+            <div className="grid md:grid-cols-3 gap-8">
+              {/* Pacote Presença Local */}
+              <div className="p-10 bg-gradient-to-br from-[#0a0a0a] to-[#0f0f0f] border border-white/5 rounded-2xl hover:border-[#d4af37]/50 transition-all duration-300 group">
+                <div className="flex items-center gap-3 mb-8">
+                  <span className="text-3xl">🟢</span>
+                  <h4 className="text-2xl font-bold">Presença Local</h4>
+                </div>
+                <ul className="space-y-4 mb-10 text-gray-300">
+                  <li className="flex items-center gap-3">
+                    <CheckCircle size={20} className="text-[#d4af37] flex-shrink-0" />
+                    <span>Site institucional simples</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle size={20} className="text-[#d4af37] flex-shrink-0" />
+                    <span>SEO local básico</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle size={20} className="text-[#d4af37] flex-shrink-0" />
+                    <span>Google Business Profile otimizado</span>
+                  </li>
+                </ul>
+                <div className="pt-8 border-t border-white/5">
+                  <p className="text-sm text-gray-500 mb-2 uppercase tracking-widest">💶 Preço sugerido:</p>
+                  <p className="text-2xl font-bold text-[#d4af37]">500 € – 900 €</p>
+                  <p className="text-xs text-gray-500 mt-2">(pago à entrega ou com entrada + mensalidade pequena)</p>
+                </div>
+              </div>
+
+              {/* Pacote Crescimento Digital */}
+              <div className="p-10 bg-gradient-to-br from-[#0a0a0a] to-[#0f0f0f] border border-white/5 rounded-2xl hover:border-[#d4af37]/50 transition-all duration-300 group">
+                <div className="flex items-center gap-3 mb-8">
+                  <span className="text-3xl">🔵</span>
+                  <h4 className="text-2xl font-bold">Crescimento Digital</h4>
+                </div>
+                <ul className="space-y-4 mb-10 text-gray-300">
+                  <li className="flex items-center gap-3">
+                    <CheckCircle size={20} className="text-[#d4af37] flex-shrink-0" />
+                    <span>Site profissional</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle size={20} className="text-[#d4af37] flex-shrink-0" />
+                    <span>Gestão básica de redes sociais</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle size={20} className="text-[#d4af37] flex-shrink-0" />
+                    <span>SEO local mensal</span>
+                  </li>
+                </ul>
+                <div className="pt-8 border-t border-white/5">
+                  <p className="text-sm text-gray-500 mb-2 uppercase tracking-widest">💶 Preço sugerido:</p>
+                  <p className="text-2xl font-bold text-[#d4af37]">650 € – 1 000 €/mês</p>
+                </div>
+              </div>
+
+              {/* Pacote Autoridade Online */}
+              <div className="p-10 bg-gradient-to-br from-[#0a0a0a] to-[#0f0f0f] border border-white/5 rounded-2xl hover:border-[#d4af37]/50 transition-all duration-300 group ring-2 ring-[#d4af37]/30">
+                <div className="flex items-center gap-3 mb-8">
+                  <span className="text-3xl">🟣</span>
+                  <h4 className="text-2xl font-bold">Autoridade Online</h4>
+                </div>
+                <div className="absolute top-4 right-4 bg-[#d4af37] text-black px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">Popular</div>
+                <ul className="space-y-4 mb-10 text-gray-300">
+                  <li className="flex items-center gap-3">
+                    <CheckCircle size={20} className="text-[#d4af37] flex-shrink-0" />
+                    <span>Site profissional completo</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle size={20} className="text-[#d4af37] flex-shrink-0" />
+                    <span>Gestão completa de redes sociais</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle size={20} className="text-[#d4af37] flex-shrink-0" />
+                    <span>SEO mensal avançado</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle size={20} className="text-[#d4af37] flex-shrink-0" />
+                    <span>Relatórios mensais</span>
+                  </li>
+                </ul>
+                <div className="pt-8 border-t border-white/5">
+                  <p className="text-sm text-gray-500 mb-2 uppercase tracking-widest">💶 Preço sugerido:</p>
+                  <p className="text-2xl font-bold text-[#d4af37]">1 000 € – 1 500 €/mês</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
