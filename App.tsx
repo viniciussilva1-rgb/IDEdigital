@@ -55,7 +55,7 @@ const Logo = ({ size = 'default' }: { size?: 'small' | 'default' | 'large' }) =>
     <div className="flex items-center group cursor-pointer">
       {!imgError ? (
         <img 
-          src="/logo.png" 
+          src="./nova logo IDE.jpeg" 
           alt="IDE Digital" 
           className={`${sizeClasses[size]} w-auto object-contain transition-all duration-500 group-hover:scale-105 group-hover:drop-shadow-[0_0_15px_rgba(212,175,55,0.4)]`}
           onError={() => setImgError(true)}
