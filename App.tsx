@@ -42,22 +42,16 @@ const GoldButton = ({ children, onClick, variant = 'primary', className = '' }: 
 };
 
 // Componente de Logo Atualizado com a nova imagem enviada
-const Logo = ({ size = 'default' }: { size?: 'small' | 'default' | 'large' }) => {
+const Logo = () => {
   const [imgError, setImgError] = useState(false);
-  
-  const sizeClasses = {
-    small: 'h-20 md:h-24',
-    default: 'h-24 md:h-36',
-    large: 'h-32 md:h-44'
-  };
 
   return (
     <div className="flex items-center group cursor-pointer">
       {!imgError ? (
         <img 
-          src="/logo.png" 
+          src="logo.png" 
           alt="IDE Digital" 
-          className={`${sizeClasses[size]} w-auto object-contain transition-all duration-500 group-hover:scale-105 group-hover:drop-shadow-[0_0_15px_rgba(212,175,55,0.4)]`}
+          className="h-12 md:h-16 w-auto object-contain transition-all duration-500 group-hover:scale-105 group-hover:drop-shadow-[0_0_15px_rgba(212,175,55,0.4)]"
           onError={() => setImgError(true)}
         />
       ) : (
@@ -106,9 +100,7 @@ const Navbar = () => {
           {navLinks.map(link => (
             <a key={link.name} href={link.href} className="text-xs font-semibold uppercase tracking-widest hover:text-[#d4af37] transition-colors">{link.name}</a>
           ))}
-          <a href="https://wa.me/351936758693?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20um%20especialista%20da%20IDE%20Digital." target="_blank" rel="noopener noreferrer">
-            <GoldButton variant="outline" className="px-6 py-2.5 text-[10px]">Falar com Especialista</GoldButton>
-          </a>
+          <GoldButton variant="outline" className="px-6 py-2.5 text-[10px]">Falar com Especialista</GoldButton>
         </div>
 
         {/* Mobile Toggle */}
@@ -123,9 +115,7 @@ const Navbar = () => {
           {navLinks.map(link => (
             <a key={link.name} href={link.href} onClick={() => setIsOpen(false)} className="text-lg font-medium border-b border-white/10 pb-2">{link.name}</a>
           ))}
-          <a href="https://wa.me/351936758693?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20um%20especialista%20da%20IDE%20Digital." target="_blank" rel="noopener noreferrer" className="w-full">
-            <GoldButton className="w-full">Falar com Especialista</GoldButton>
-          </a>
+          <GoldButton className="w-full">WhatsApp</GoldButton>
         </div>
       )}
     </nav>
@@ -223,11 +213,9 @@ const MidCTA = () => (
         “Chegou a hora da sua marca aparecer.”
       </h2>
       <div className="flex justify-center">
-        <a href="https://wa.me/351936758693?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20a%20IDE%20Digital." target="_blank" rel="noopener noreferrer">
-          <GoldButton variant="cta" className="group text-lg px-12 py-5 border-3">
-            FALE COM A IDE DIGITAL AGORA <ArrowRight className="group-hover:translate-x-2 transition-transform" />
-          </GoldButton>
-        </a>
+        <GoldButton variant="cta" className="group text-lg px-12 py-5 border-3">
+          FALE COM A IDE DIGITAL AGORA <ArrowRight className="group-hover:translate-x-2 transition-transform" />
+        </GoldButton>
       </div>
     </div>
   </section>
@@ -334,7 +322,7 @@ const Footer = () => (
       <div className="grid md:grid-cols-4 gap-16 mb-20">
         <div className="col-span-1 md:col-span-1">
           <Logo />
-          <p className="text-gray-300 mt-8 leading-relaxed text-sm font-medium">
+          <p className="text-gray-500 mt-8 leading-relaxed text-sm">
             Especialistas em transformar ideias em presenças digitais luxuosas e lucrativas.
           </p>
           <div className="flex gap-4 mt-8">
@@ -355,97 +343,23 @@ const Footer = () => (
         <div>
           <h4 className="font-bold text-sm uppercase tracking-[0.2em] mb-8 text-[#d4af37]">Contato</h4>
           <ul className="space-y-4 text-gray-400 text-sm">
-            <li>Lourinhã, Portugal</li>
-            <li>idedigital.pt@gmail.com</li>
-            <li>+351 936 758 693</li>
+            <li>São Paulo, SP</li>
+            <li>contato@idedigital.com</li>
+            <li>+55 (11) 99999-9999</li>
           </ul>
         </div>
         
-        <div className="col-span-1 md:col-span-1">
-          <h4 className="font-bold text-sm uppercase tracking-[0.2em] mb-8 text-[#d4af37]">Solicitar Contato</h4>
-          <p className="text-gray-300 text-sm mb-6 font-medium">Preencha e entraremos em contato consigo.</p>
-          <form 
-            className="space-y-4" 
-            action="https://formsubmit.co/ajax/idedigital.pt@gmail.com" 
-            method="POST"
-            onSubmit={async (e) => {
-              e.preventDefault();
-              const form = e.target as HTMLFormElement;
-              const formData = new FormData(form);
-              const submitBtn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
-              const originalText = submitBtn.innerHTML;
-              submitBtn.innerHTML = 'A enviar...';
-              submitBtn.disabled = true;
-              
-              try {
-                const response = await fetch('https://formsubmit.co/ajax/idedigital.pt@gmail.com', {
-                  method: 'POST',
-                  body: formData,
-                  headers: {
-                    'Accept': 'application/json'
-                  }
-                });
-                
-                if (response.ok) {
-                  alert('Mensagem enviada com sucesso! Entraremos em contacto em breve.');
-                  form.reset();
-                } else {
-                  alert('Erro ao enviar. Por favor tente novamente.');
-                }
-              } catch (error) {
-                alert('Erro ao enviar. Por favor tente novamente.');
-              }
-              
-              submitBtn.innerHTML = originalText;
-              submitBtn.disabled = false;
-            }}
-          >
-            <input type="hidden" name="_subject" value="Novo contacto do site IDE Digital" />
-            <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_template" value="table" />
-            <input 
-              type="email" 
-              name="email"
-              placeholder="Seu e-mail" 
-              required
-              className="w-full bg-white/5 border border-white/10 rounded-lg py-3 px-4 text-sm focus:outline-none focus:border-[#d4af37] transition-all" 
-            />
-            <input 
-              type="tel" 
-              name="phone"
-              placeholder="Seu telemóvel" 
-              required
-              className="w-full bg-white/5 border border-white/10 rounded-lg py-3 px-4 text-sm focus:outline-none focus:border-[#d4af37] transition-all" 
-            />
-            <select 
-              name="service"
-              required
-              className="w-full bg-white/5 border border-white/10 rounded-lg py-3 px-4 text-sm focus:outline-none focus:border-[#d4af37] transition-all text-gray-400 appearance-none cursor-pointer"
-            >
-              <option value="" disabled selected>Selecione o serviço</option>
-              <option value="Criação de Site">Criação de Site</option>
-              <option value="SEO e Otimização">SEO e Otimização</option>
-              <option value="Gestão de Redes Sociais">Gestão de Redes Sociais</option>
-              <option value="Marketing Digital">Marketing Digital</option>
-              <option value="Outro">Outro</option>
-            </select>
-            <textarea 
-              name="message"
-              placeholder="Descreva o que pretende (opcional)"
-              rows={3}
-              className="w-full bg-white/5 border border-white/10 rounded-lg py-3 px-4 text-sm focus:outline-none focus:border-[#d4af37] transition-all resize-none"
-            ></textarea>
-            <button 
-              type="submit"
-              className="w-full bg-gold-gradient text-black py-3 px-4 rounded-lg font-bold text-sm uppercase tracking-wider hover:brightness-110 transition-all flex items-center justify-center gap-2"
-            >
-              Enviar <ArrowRight size={16} />
-            </button>
-          </form>
+        <div>
+          <h4 className="font-bold text-sm uppercase tracking-[0.2em] mb-8 text-[#d4af37]">Newsletter</h4>
+          <p className="text-gray-500 text-xs mb-6">Receba insights sobre o mercado digital.</p>
+          <div className="relative">
+            <input type="email" placeholder="Seu e-mail" className="w-full bg-white/5 border border-white/10 rounded-full py-3 px-5 text-sm focus:outline-none focus:border-[#d4af37] transition-all" />
+            <button className="absolute right-2 top-2 bg-gold-gradient text-black p-1.5 rounded-full"><ArrowRight size={16} /></button>
+          </div>
         </div>
       </div>
       
-      <div className="pt-12 border-t border-white/5 text-center text-xs text-gray-400 uppercase tracking-widest">
+      <div className="pt-12 border-t border-white/5 text-center text-[10px] text-gray-600 uppercase tracking-widest">
         <p>&copy; {new Date().getFullYear()} IDE Digital. Transformando o futuro hoje.</p>
       </div>
     </div>
