@@ -116,7 +116,7 @@ const Navbar = () => {
           {navLinks.map(link => (
             <a key={link.name} href={link.href} onClick={() => setIsOpen(false)} className="text-lg font-medium border-b border-white/10 pb-2">{link.name}</a>
           ))}
-          <GoldButton className="w-full">WhatsApp</GoldButton>
+          <GoldButton className="w-full" onClick={() => window.open('https://wa.me/351936758693', '_blank')}>WhatsApp</GoldButton>
         </div>
       )}
     </nav>
@@ -139,7 +139,7 @@ const Hero = () => (
           Estratégias personalizadas de alta performance para quem não aceita ser apenas mais um no mercado.
         </p>
         <div className="flex flex-col sm:flex-row gap-5">
-          <GoldButton className="group">
+          <GoldButton className="group" onClick={() => window.open('https://wa.me/351936758693', '_blank')}>
             Começar Agora <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
           </GoldButton>
           <GoldButton variant="outline">
@@ -607,7 +607,7 @@ const App: React.FC = () => {
       
       {/* Floating WhatsApp */}
       <a 
-        href="https://wa.me/5511999999999" 
+        href="https://wa.me/351936758693" 
         target="_blank" 
         rel="noopener noreferrer"
         className="fixed bottom-8 right-8 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-[0_10px_30px_rgba(37,211,102,0.4)] hover:scale-110 hover:shadow-[0_15px_40px_rgba(37,211,102,0.6)] transition-all active:scale-95 animate-bounce"
