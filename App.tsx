@@ -406,9 +406,9 @@ const App: React.FC = () => {
         <div className="container mx-auto px-6">
           <SectionTitle subtitle="Tabela de Preços" title="Serviços Individuais e Pacotes" />
           
-          {/* 💻 Criação de Sites */}
+          {/* Criação de Sites */}
           <div className="mb-20">
-            <h3 className="text-3xl font-bold mb-8 flex items-center gap-3"><span className="text-2xl">💻</span> Criação de Sites</h3>
+            <h3 className="text-3xl font-bold mb-8">Criação de Sites</h3>
             <div className="bg-[#0a0a0a] border border-white/5 rounded-2xl overflow-x-auto">
               <table className="w-full text-left">
                 <thead>
@@ -444,9 +444,9 @@ const App: React.FC = () => {
             </div>
           </div>
 
-          {/* 📱 Gestão de Redes Sociais */}
+          {/* Gestão de Redes Sociais */}
           <div className="mb-20">
-            <h3 className="text-3xl font-bold mb-8 flex items-center gap-3"><span className="text-2xl">📱</span> Gestão de Redes Sociais</h3>
+            <h3 className="text-3xl font-bold mb-8">Gestão de Redes Sociais</h3>
             <div className="bg-[#0a0a0a] border border-white/5 rounded-2xl overflow-x-auto">
               <table className="w-full text-left">
                 <thead>
@@ -477,9 +477,9 @@ const App: React.FC = () => {
             </div>
           </div>
 
-          {/* 🔍 SEO */}
+          {/* SEO */}
           <div className="mb-20">
-            <h3 className="text-3xl font-bold mb-8 flex items-center gap-3"><span className="text-2xl">🔍</span> SEO (Otimização para Motores de Busca)</h3>
+            <h3 className="text-3xl font-bold mb-8">SEO (Otimização para Motores de Busca)</h3>
             <div className="bg-[#0a0a0a] border border-white/5 rounded-2xl overflow-x-auto">
               <table className="w-full text-left">
                 <thead>
