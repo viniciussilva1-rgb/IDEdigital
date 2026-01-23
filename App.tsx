@@ -67,7 +67,7 @@ const Logo = () => {
 const SectionTitle = ({ subtitle, title, centered = true }: { subtitle: string; title: string; centered?: boolean }) => (
   <div className={`mb-16 ${centered ? 'text-center' : 'text-left'}`}>
     <span className="text-[#d4af37] font-bold tracking-[0.3em] uppercase text-sm block mb-4">{subtitle}</span>
-    <h2 className="text-4xl md:text-5xl font-display font-bold leading-tight">{title}</h2>
+    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold leading-tight">{title}</h2>
     <div className={`h-1 w-24 bg-gold-gradient mt-6 ${centered ? 'mx-auto' : ''}`}></div>
   </div>
 );
@@ -93,7 +93,7 @@ const Navbar = () => {
 
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-black/95 backdrop-blur-md py-3 border-b border-[#d4af37]/20' : 'bg-transparent py-6'}`}>
-      <div className="container mx-auto px-6 flex justify-between items-center">
+      <div className="container mx-auto px-4 sm:px-6 flex justify-between items-center">
         <Logo />
 
         {/* Desktop Menu */}
@@ -128,10 +128,10 @@ const Hero = () => (
     {/* Ambient light */}
     <div className="absolute top-[-20%] right-[-10%] w-[800px] h-[800px] bg-[#d4af37] opacity-[0.08] blur-[150px] rounded-full"></div>
     
-    <div className="container mx-auto px-6 z-10 grid md:grid-cols-2 gap-12 items-center">
+    <div className="container mx-auto px-4 sm:px-6 z-10 grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 items-center">
       <div className="animate-fade-in">
         <span className="text-[#d4af37] font-bold tracking-[0.4em] uppercase mb-6 block">Premium Digital Agency</span>
-        <h1 className="text-5xl md:text-7xl font-display font-bold leading-[1.1] mb-8">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-display font-bold leading-[1.1] mb-8">
           Sua marca com <br />
           <span className="gold-gradient">autoridade máxima</span> no digital.
         </h1>
@@ -186,13 +186,13 @@ const Services = () => {
 
   return (
     <section id="services" className="py-24 bg-black">
-      <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-3 gap-8">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
           {services.map(service => (
-            <div key={service.id} className="p-10 bg-[#0a0a0a] border border-white/5 rounded-2xl hover:bg-[#0f0f0f] transition-all duration-500 group border-b-2 hover:border-b-[#d4af37]">
-              <div className="mb-8 group-hover:scale-110 transition-transform duration-500">{service.icon}</div>
-              <h3 className="text-2xl font-bold mb-5 leading-tight">{service.title}</h3>
-              <p className="text-gray-400 leading-relaxed mb-8 text-sm">{service.description}</p>
+            <div key={service.id} className="p-6 sm:p-10 bg-[#0a0a0a] border border-white/5 rounded-2xl hover:bg-[#0f0f0f] transition-all duration-500 group border-b-2 hover:border-b-[#d4af37]">
+              <div className="mb-6 sm:mb-8 group-hover:scale-110 transition-transform duration-500">{service.icon}</div>
+              <h3 className="text-lg sm:text-2xl font-bold mb-4 sm:mb-5 leading-tight">{service.title}</h3>
+              <p className="text-gray-400 leading-relaxed mb-6 sm:mb-8 text-sm">{service.description}</p>
               <a href="#" className="inline-flex items-center gap-3 text-[#d4af37] font-extrabold text-xs uppercase tracking-[0.2em] group/link">
                 Saiba Mais <ArrowRight size={14} className="group-hover/link:translate-x-2 transition-transform" />
               </a>
@@ -209,8 +209,8 @@ const MidCTA = () => (
     <div className="absolute inset-0 opacity-20 pointer-events-none">
       <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle,white_1px,transparent_1px)] bg-[size:40px_40px]"></div>
     </div>
-    <div className="container mx-auto px-6 text-center relative z-10">
-      <h2 className="text-4xl md:text-6xl font-display font-bold text-black mb-10 max-w-4xl mx-auto leading-tight italic">
+    <div className="container mx-auto px-4 sm:px-6 text-center relative z-10">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-display font-bold text-black mb-10 max-w-4xl mx-auto leading-tight italic">
         “Chegou a hora da sua marca aparecer.”
       </h2>
       <div className="flex justify-center">
@@ -224,7 +224,7 @@ const MidCTA = () => (
 
 const About = () => (
   <section id="about" className="py-24 bg-black">
-    <div className="container mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
+    <div className="container mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 md:gap-20 items-center">
       <div className="relative">
         <div className="absolute -inset-4 bg-gold-gradient opacity-10 blur-2xl rounded-full"></div>
         <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1000" alt="Equipe IDE" className="rounded-2xl relative z-10 shadow-2xl grayscale hover:grayscale-0 transition-all duration-1000" />
@@ -263,9 +263,9 @@ const Portfolio = () => {
 
   return (
     <section id="portfolio" className="py-24 bg-[#050505]">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4 sm:px-6">
         <SectionTitle subtitle="Nossos Cases" title="Projetos que inspiram" />
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {projects.map(project => (
             <div key={project.id} className="group relative overflow-hidden rounded-xl aspect-[4/5] bg-black">
               <img src={project.image} alt={project.title} className="w-full h-full object-cover opacity-60 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 group-hover:scale-110" />
@@ -292,7 +292,7 @@ const FAQ = () => {
 
   return (
     <section id="faq" className="py-24 bg-black">
-      <div className="container mx-auto px-6 max-w-4xl">
+      <div className="container mx-auto px-4 sm:px-6 max-w-4xl">
         <SectionTitle subtitle="Dúvidas" title="Perguntas Frequentes" />
         <div className="space-y-5">
           {faqs.map(faq => (
@@ -319,9 +319,9 @@ const FAQ = () => {
 
 const Footer = () => (
   <footer className="bg-black pt-24 pb-12 border-t border-[#d4af37]/10">
-    <div className="container mx-auto px-6">
-      <div className="grid md:grid-cols-4 gap-16 mb-20">
-        <div className="col-span-1 md:col-span-1">
+    <div className="container mx-auto px-4 sm:px-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 lg:gap-16 mb-20">
+        <div className="col-span-1 sm:col-span-1 lg:col-span-1">
           <Logo />
           <p className="text-gray-500 mt-8 leading-relaxed text-sm">
             Especialistas em transformar ideias em presenças digitais luxuosas e lucrativas.
@@ -379,14 +379,14 @@ const App: React.FC = () => {
       
       {/* Testimonials */}
       <section className="py-24 bg-black">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <SectionTitle subtitle="Depoimentos" title="Quem confia na IDE" />
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             {[
               { name: "Dr. André Santos", role: "Advogado Premium", content: "A IDE Digital elevou o patamar da minha banca. Hoje meu site transmite exatamente a autoridade que meus clientes buscam." },
               { name: "Clara Oliveira", role: "E-commerce Founder", content: "Resultados práticos. Em 3 meses nossa taxa de conversão dobrou graças à nova interface e estratégias de SEO." }
             ].map((t, idx) => (
-              <div key={idx} className="p-10 bg-[#0a0a0a] border border-white/5 rounded-3xl relative">
+              <div key={idx} className="p-6 sm:p-10 bg-[#0a0a0a] border border-white/5 rounded-3xl relative">
                 <p className="text-gray-300 italic text-lg mb-8">"{t.content}"</p>
                 <div className="flex items-center gap-4">
                   <div className="w-10 h-1 bg-gold-gradient"></div>
@@ -403,41 +403,41 @@ const App: React.FC = () => {
 
       {/* Pricing Section */}
       <section id="pricing" className="py-24 bg-black">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <SectionTitle subtitle="Tabela de Preços" title="Serviços Individuais e Pacotes" />
           
           {/* Criação de Sites */}
           <div className="mb-20">
-            <h3 className="text-3xl font-bold mb-8">Criação de Sites</h3>
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6 sm:mb-8">Criação de Sites</h3>
             <div className="bg-[#0a0a0a] border border-white/5 rounded-2xl overflow-x-auto">
               <table className="w-full text-left">
                 <thead>
                   <tr className="border-b border-white/5 bg-[#0f0f0f]">
-                    <th className="p-6 font-bold text-[#d4af37] uppercase tracking-widest">Serviço</th>
-                    <th className="p-6 font-bold text-[#d4af37] uppercase tracking-widest">Preço Estimado</th>
-                    <th className="p-6 font-bold text-[#d4af37] uppercase tracking-widest">Observação</th>
+                    <th className="p-3 sm:p-6 font-bold text-[#d4af37] uppercase tracking-widest text-xs sm:text-sm">Serviço</th>
+                    <th className="p-3 sm:p-6 font-bold text-[#d4af37] uppercase tracking-widest text-xs sm:text-sm">Preço</th>
+                    <th className="hidden sm:table-cell p-3 sm:p-6 font-bold text-[#d4af37] uppercase tracking-widest text-xs sm:text-sm">Observação</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr className="border-b border-white/5 hover:bg-[#0f0f0f] transition-colors">
-                    <td className="p-6">Site institucional simples (5 páginas)</td>
-                    <td className="p-6 font-bold">350 € – 800 €</td>
-                    <td className="p-6 text-gray-400">Valor médio de mercado</td>
+                    <td className="p-3 sm:p-6">Site institucional simples (5 páginas)</td>
+                    <td className="p-3 sm:p-6 font-bold">350 € – 800 €</td>
+                    <td className="p-3 sm:p-6 text-gray-400">Valor médio de mercado</td>
                   </tr>
                   <tr className="border-b border-white/5 hover:bg-[#0f0f0f] transition-colors">
-                    <td className="p-6">Site profissional completo</td>
-                    <td className="p-6 font-bold">800 € – 2 500 €</td>
-                    <td className="p-6 text-gray-400">Dependendo de funcionalidades e design</td>
+                    <td className="p-3 sm:p-6">Site profissional completo</td>
+                    <td className="p-3 sm:p-6 font-bold">800 € – 2 500 €</td>
+                    <td className="p-3 sm:p-6 text-gray-400">Dependendo de funcionalidades e design</td>
                   </tr>
                   <tr className="border-b border-white/5 hover:bg-[#0f0f0f] transition-colors">
-                    <td className="p-6">Loja online básica</td>
-                    <td className="p-6 font-bold">1 200 € – 3 500 €</td>
-                    <td className="p-6 text-gray-400">E-commerce simples</td>
+                    <td className="p-3 sm:p-6">Loja online básica</td>
+                    <td className="p-3 sm:p-6 font-bold">1 200 € – 3 500 €</td>
+                    <td className="p-3 sm:p-6 text-gray-400">E-commerce simples</td>
                   </tr>
                   <tr className="hover:bg-[#0f0f0f] transition-colors">
-                    <td className="p-6">Website personalizado avançado</td>
-                    <td className="p-6 font-bold">2 500 € – 10 000 €+</td>
-                    <td className="p-6 text-gray-400">Com base de dados ou funcionalidades específicas</td>
+                    <td className="p-3 sm:p-6">Website personalizado avançado</td>
+                    <td className="p-3 sm:p-6 font-bold">2 500 € – 10 000 €+</td>
+                    <td className="p-3 sm:p-6 text-gray-400">Com base de dados ou funcionalidades específicas</td>
                   </tr>
                 </tbody>
               </table>
@@ -446,31 +446,31 @@ const App: React.FC = () => {
 
           {/* Gestão de Redes Sociais */}
           <div className="mb-20">
-            <h3 className="text-3xl font-bold mb-8">Gestão de Redes Sociais</h3>
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6 sm:mb-8">Gestão de Redes Sociais</h3>
             <div className="bg-[#0a0a0a] border border-white/5 rounded-2xl overflow-x-auto">
               <table className="w-full text-left">
                 <thead>
                   <tr className="border-b border-white/5 bg-[#0f0f0f]">
-                    <th className="p-6 font-bold text-[#d4af37] uppercase tracking-widest">Serviço</th>
-                    <th className="p-6 font-bold text-[#d4af37] uppercase tracking-widest">Preço Estimado</th>
-                    <th className="p-6 font-bold text-[#d4af37] uppercase tracking-widest">O que pode incluir</th>
+                    <th className="p-3 sm:p-6 font-bold text-[#d4af37] uppercase tracking-widest text-xs sm:text-sm">Serviço</th>
+                    <th className="p-3 sm:p-6 font-bold text-[#d4af37] uppercase tracking-widest text-xs sm:text-sm">Preço</th>
+                    <th className="hidden sm:table-cell p-3 sm:p-6 font-bold text-[#d4af37] uppercase tracking-widest text-xs sm:text-sm">O que inclui</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr className="border-b border-white/5 hover:bg-[#0f0f0f] transition-colors">
-                    <td className="p-6">Básico (2-3 posts/mês)</td>
-                    <td className="p-6 font-bold">100 € – 250 €/mês</td>
-                    <td className="p-6 text-gray-400">Criação de posts e gestão simples</td>
+                    <td className="p-3 sm:p-6">Básico</td>
+                    <td className="p-3 sm:p-6 font-bold">100 € – 250 €</td>
+                    <td className="hidden sm:table-cell p-3 sm:p-6 text-gray-400">Criação de posts</td>
                   </tr>
                   <tr className="border-b border-white/5 hover:bg-[#0f0f0f] transition-colors">
-                    <td className="p-6">Médio (conteúdo + estratégia)</td>
-                    <td className="p-6 font-bold">245 € – 350 €/mês</td>
-                    <td className="p-6 text-gray-400">Posts + relatórios + criação gráfica</td>
+                    <td className="p-3 sm:p-6">Médio</td>
+                    <td className="p-3 sm:p-6 font-bold">245 € – 350 €</td>
+                    <td className="hidden sm:table-cell p-3 sm:p-6 text-gray-400">Posts + relatórios</td>
                   </tr>
                   <tr className="hover:bg-[#0f0f0f] transition-colors">
-                    <td className="p-6">Completo (posts frequentes + vídeos)</td>
-                    <td className="p-6 font-bold">350 € – 500 €+/mês</td>
-                    <td className="p-6 text-gray-400">Conteúdo avançado e interação</td>
+                    <td className="p-3 sm:p-6">Completo</td>
+                    <td className="p-3 sm:p-6 font-bold">350 € – 500 €+</td>
+                    <td className="hidden sm:table-cell p-3 sm:p-6 text-gray-400">Conteúdo avançado</td>
                   </tr>
                 </tbody>
               </table>
@@ -479,31 +479,31 @@ const App: React.FC = () => {
 
           {/* SEO */}
           <div className="mb-20">
-            <h3 className="text-3xl font-bold mb-8">SEO (Otimização para Motores de Busca)</h3>
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6 sm:mb-8">SEO (Otimização para Motores de Busca)</h3>
             <div className="bg-[#0a0a0a] border border-white/5 rounded-2xl overflow-x-auto">
               <table className="w-full text-left">
                 <thead>
                   <tr className="border-b border-white/5 bg-[#0f0f0f]">
-                    <th className="p-6 font-bold text-[#d4af37] uppercase tracking-widest">Serviço</th>
-                    <th className="p-6 font-bold text-[#d4af37] uppercase tracking-widest">Preço Estimado</th>
-                    <th className="p-6 font-bold text-[#d4af37] uppercase tracking-widest">Detalhes</th>
+                    <th className="p-3 sm:p-6 font-bold text-[#d4af37] uppercase tracking-widest text-xs sm:text-sm">Serviço</th>
+                    <th className="p-3 sm:p-6 font-bold text-[#d4af37] uppercase tracking-widest text-xs sm:text-sm">Preço</th>
+                    <th className="hidden sm:table-cell p-3 sm:p-6 font-bold text-[#d4af37] uppercase tracking-widest text-xs sm:text-sm">Detalhes</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr className="border-b border-white/5 hover:bg-[#0f0f0f] transition-colors">
-                    <td className="p-6">Auditoria SEO (única)</td>
-                    <td className="p-6 font-bold">240 € – 1 050 €</td>
-                    <td className="p-6 text-gray-400">Análise técnica e recomendações</td>
+                    <td className="p-3 sm:p-6">Auditoria SEO</td>
+                    <td className="p-3 sm:p-6 font-bold">240 € – 1 050 €</td>
+                    <td className="hidden sm:table-cell p-3 sm:p-6 text-gray-400">Análise técnica</td>
                   </tr>
                   <tr className="border-b border-white/5 hover:bg-[#0f0f0f] transition-colors">
-                    <td className="p-6">SEO local / mensal</td>
-                    <td className="p-6 font-bold">500 € – 1 500 €/mês</td>
-                    <td className="p-6 text-gray-400">Serviços contínuos para negócios locais</td>
+                    <td className="p-3 sm:p-6">SEO Local</td>
+                    <td className="p-3 sm:p-6 font-bold">500 € – 1 500 €</td>
+                    <td className="hidden sm:table-cell p-3 sm:p-6 text-gray-400">Serviços mensais</td>
                   </tr>
                   <tr className="hover:bg-[#0f0f0f] transition-colors">
-                    <td className="p-6">Conteúdo SEO por artigo</td>
-                    <td className="p-6 font-bold">130 € – 330 €/artigo</td>
-                    <td className="p-6 text-gray-400">Artigos otimizados para SEO</td>
+                    <td className="p-3 sm:p-6">Conteúdo SEO</td>
+                    <td className="p-3 sm:p-6 font-bold">130 € – 330 €</td>
+                    <td className="hidden sm:table-cell p-3 sm:p-6 text-gray-400">Por artigo</td>
                   </tr>
                 </tbody>
               </table>
@@ -512,13 +512,13 @@ const App: React.FC = () => {
 
           {/* 📦 Pacotes Estratégicos */}
           <div>
-            <h3 className="text-3xl font-bold mb-12 text-center">Pacotes Estratégicos</h3>
-            <div className="grid md:grid-cols-3 gap-8">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-8 sm:mb-12 text-center">Pacotes Estratégicos</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               {/* Pacote Presença Local */}
-              <div className="p-10 bg-gradient-to-br from-[#0a0a0a] to-[#0f0f0f] border border-white/5 rounded-2xl hover:border-[#d4af37]/50 transition-all duration-300 group">
+              <div className="p-6 sm:p-10 bg-gradient-to-br from-[#0a0a0a] to-[#0f0f0f] border border-white/5 rounded-2xl hover:border-[#d4af37]/50 transition-all duration-300 group\">
                 <div className="flex items-center gap-3 mb-8">
                   <span className="text-3xl">🟢</span>
-                  <h4 className="text-2xl font-bold">Presença Local</h4>
+                  <h4 className="text-lg sm:text-2xl font-bold">Presença Local</h4>
                 </div>
                 <ul className="space-y-4 mb-10 text-gray-300">
                   <li className="flex items-center gap-3">
@@ -542,10 +542,10 @@ const App: React.FC = () => {
               </div>
 
               {/* Pacote Crescimento Digital */}
-              <div className="p-10 bg-gradient-to-br from-[#0a0a0a] to-[#0f0f0f] border border-white/5 rounded-2xl hover:border-[#d4af37]/50 transition-all duration-300 group">
-                <div className="flex items-center gap-3 mb-8">
+              <div className="p-6 sm:p-10 bg-gradient-to-br from-[#0a0a0a] to-[#0f0f0f] border border-white/5 rounded-2xl hover:border-[#d4af37]/50 transition-all duration-300 group\">
+                <div className="flex items-center gap-3 mb-6 sm:mb-8">
                   <span className="text-3xl">🔵</span>
-                  <h4 className="text-2xl font-bold">Crescimento Digital</h4>
+                  <h4 className="text-lg sm:text-2xl font-bold">Crescimento Digital</h4>
                 </div>
                 <ul className="space-y-4 mb-10 text-gray-300">
                   <li className="flex items-center gap-3">
@@ -568,10 +568,10 @@ const App: React.FC = () => {
               </div>
 
               {/* Pacote Autoridade Online */}
-              <div className="p-10 bg-gradient-to-br from-[#0a0a0a] to-[#0f0f0f] border border-white/5 rounded-2xl hover:border-[#d4af37]/50 transition-all duration-300 group ring-2 ring-[#d4af37]/30">
-                <div className="flex items-center gap-3 mb-8">
+              <div className="p-6 sm:p-10 bg-gradient-to-br from-[#0a0a0a] to-[#0f0f0f] border border-white/5 rounded-2xl hover:border-[#d4af37]/50 transition-all duration-300 group ring-2 ring-[#d4af37]/30\">
+                <div className="flex items-center gap-3 mb-6 sm:mb-8">
                   <span className="text-3xl">🟣</span>
-                  <h4 className="text-2xl font-bold">Autoridade Online</h4>
+                  <h4 className="text-lg sm:text-2xl font-bold">Autoridade Online</h4>
                 </div>
                 <div className="absolute top-4 right-4 bg-[#d4af37] text-black px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">Popular</div>
                 <ul className="space-y-4 mb-10 text-gray-300">
