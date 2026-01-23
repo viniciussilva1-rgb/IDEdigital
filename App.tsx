@@ -142,7 +142,7 @@ const Hero = () => (
           <GoldButton className="group" onClick={() => window.open('https://wa.me/351936758693', '_blank')}>
             Começar Agora <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
           </GoldButton>
-          <GoldButton variant="outline">
+          <GoldButton variant="outline" onClick={() => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })}>
             Ver Portfólio
           </GoldButton>
         </div>
