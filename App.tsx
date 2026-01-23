@@ -101,7 +101,7 @@ const Navbar = () => {
           {navLinks.map(link => (
             <a key={link.name} href={link.href} className="text-xs font-semibold uppercase tracking-widest hover:text-[#d4af37] transition-colors">{link.name}</a>
           ))}
-          <GoldButton variant="outline" className="px-6 py-2.5 text-[10px]">Falar com Especialista</GoldButton>
+          <GoldButton variant="outline" className="px-6 py-2.5 text-[10px]" onClick={() => window.open('https://wa.me/351936758693', '_blank')}>Falar com Especialista</GoldButton>
         </div>
 
         {/* Mobile Toggle */}
