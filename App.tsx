@@ -344,9 +344,9 @@ const Footer = () => (
         <div>
           <h4 className="font-bold text-sm uppercase tracking-[0.2em] mb-8 text-[#d4af37]">Contato</h4>
           <ul className="space-y-4 text-gray-400 text-sm">
-            <li>São Paulo, SP</li>
-            <li>contato@idedigital.com</li>
-            <li>+55 (11) 99999-9999</li>
+            <li>Lourinhã</li>
+            <li>idedigital.pt@gmail.com</li>
+            <li>+351 936 758 693</li>
           </ul>
         </div>
         
