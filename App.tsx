@@ -512,7 +512,7 @@ const App: React.FC = () => {
 
           {/* 📦 Pacotes Estratégicos */}
           <div>
-            <h3 className="text-3xl font-bold mb-12 text-center">📦 Exemplos de Pacotes Estratégicos</h3>
+            <h3 className="text-3xl font-bold mb-12 text-center">Pacotes Estratégicos</h3>
             <div className="grid md:grid-cols-3 gap-8">
               {/* Pacote Presença Local */}
               <div className="p-10 bg-gradient-to-br from-[#0a0a0a] to-[#0f0f0f] border border-white/5 rounded-2xl hover:border-[#d4af37]/50 transition-all duration-300 group">
@@ -535,9 +535,9 @@ const App: React.FC = () => {
                   </li>
                 </ul>
                 <div className="pt-8 border-t border-white/5">
-                  <p className="text-sm text-gray-500 mb-2 uppercase tracking-widest">💶 Preço sugerido:</p>
-                  <p className="text-2xl font-bold text-[#d4af37]">500 € – 900 €</p>
-                  <p className="text-xs text-gray-500 mt-2">(pago à entrega ou com entrada + mensalidade pequena)</p>
+                  <p className="text-sm text-gray-500 mb-2 uppercase tracking-widest">Investimento:</p>
+                  <p className="text-2xl font-bold text-[#d4af37]">€500 - €900</p>
+                  <p className="text-xs text-gray-500 mt-2">Pagamento único ou com entrada + parcelas</p>
                 </div>
               </div>
 
@@ -562,8 +562,8 @@ const App: React.FC = () => {
                   </li>
                 </ul>
                 <div className="pt-8 border-t border-white/5">
-                  <p className="text-sm text-gray-500 mb-2 uppercase tracking-widest">💶 Preço sugerido:</p>
-                  <p className="text-2xl font-bold text-[#d4af37]">650 € – 1 000 €/mês</p>
+                  <p className="text-sm text-gray-500 mb-2 uppercase tracking-widest">Investimento Mensal:</p>
+                  <p className="text-2xl font-bold text-[#d4af37]">€650 - €1.000</p>
                 </div>
               </div>
 
@@ -593,8 +593,8 @@ const App: React.FC = () => {
                   </li>
                 </ul>
                 <div className="pt-8 border-t border-white/5">
-                  <p className="text-sm text-gray-500 mb-2 uppercase tracking-widest">💶 Preço sugerido:</p>
-                  <p className="text-2xl font-bold text-[#d4af37]">1 000 € – 1 500 €/mês</p>
+                  <p className="text-sm text-gray-500 mb-2 uppercase tracking-widest">Investimento Mensal:</p>
+                  <p className="text-2xl font-bold text-[#d4af37]">€1.000 - €1.500</p>
                 </div>
               </div>
             </div>
