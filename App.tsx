@@ -573,7 +573,6 @@ const App: React.FC = () => {
                   <span className="text-3xl">🟣</span>
                   <h4 className="text-lg sm:text-2xl font-bold">Autoridade Online</h4>
                 </div>
-                <div className="absolute top-4 right-4 bg-[#d4af37] text-black px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">Popular</div>
                 <ul className="space-y-4 mb-10 text-gray-300">
                   <li className="flex items-center gap-3">
                     <CheckCircle size={20} className="text-[#d4af37] flex-shrink-0" />
